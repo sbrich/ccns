@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: http://example.org/sitemap.xml
+Sitemap: https://github.com/krembilneuroinformatics/ccns/tree/gh-pages/sitemap.xml
