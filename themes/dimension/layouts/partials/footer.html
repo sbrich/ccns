@@ -1,18 +1,9 @@
 
-				<!-- Footer -->
-					<footer id="footer">
-						<p class="copyright">&copy; {{ .Site.Params.copyright }}. Design: <a href="https://html5up.net">HTML5 UP</a>. Powered by <a href="https://www.gohugo.io/">Hugo.</a></p>
-					</footer>
+    <!-- Scripts -->
+    <script src={{ "assets/js/jquery.min.js" | absURL }}></script>
+    <script src={{ "assets/js/browser.min.js" | absURL }}></script>
+    <script src={{ "assets/js/breakpoints.min.js" | absURL }}></script>
+    <script src={{ "assets/js/util.js" | absURL }}></script>
+    <script src={{ "assets/js/main.js" | absURL }}></script>
 
-			</div>
-		<!-- BG -->
-			<div id="bg"></div>
-
-		<!-- Scripts -->
-			<script src="/js/skel.min.js"></script>
-			<script src="/js/util.js"></script>
-			<script src="/js/main.js"></script>
-			{{ template "_internal/google_analytics_async.html" . }}
-
-	</body>
 </html>

@@ -1,81 +1,78 @@
 # Dimension
 
-Dimension is a single page and responsive site template. It is a port of [HTML5 UP's Dimension theme](https://html5up.net/uploads/demos/dimension/).
+A hugo port of HTML5UP's responsive and minimal dimension theme. With native support for Netlify's headless CMS.
 
-![Dimension Theme screenshot](https://raw.githubusercontent.com/sethmacleod/dimension/master/images/screenshot.png)
+![Dimension](https://github.com/your-identity/hugo-theme-dimension/blob/master/images/screenshot.png?raw=1)
 
-## Installation
+---
 
-Run the following commands inside your Hugo site folder:
+- [Dimension](#dimension)
+  - [How to start](#how-to-start)
+  - [How to configure](#how-to-configure)
+  - [Post archetype](#post-archetype)
+  - [How to run your site](#how-to-run-your-site)
+  - [How to contribute](#how-to-contribute)
+  - [Sponsoring](#sponsoring)
+  - [License](#license)
 
-    $ git clone https://github.com/sethmacleod/dimension.git themes/dimension
+## How to start
 
-Alternatively use git submodules in order to have a way to easily update the theme from the source in case you have your site in git as well.
-For this run the following commands inside your Hugo site folder:
+You can download the theme manually by going to [https://github.com/your-identity/hugo-theme-dimension.git](https://github.com/your-identity/hugo-theme-dimension.git) and pasting it to `themes/dimension` in your root directory.
 
-    $ git submodule add https://github.com/sethmacleod/dimension.git themes/dimension
+You can also clone it directly to your Hugo folder:
 
-If you checkout your site from a repository which has this added as a submodule (e.g. if you are using CI to deploy), execute following commands or put them into a initgit.sh file in your repository which can be executed by your CI:
+```
+$ git clone https://github.com/your-identity/hugo-theme-dimension.git themes/dimension
+```
 
-    $ git submodule init
-    $ git submodule update
+If you don't want to make any radical changes, it's the best option, because you can get new updates when they are available. You can also include it as a git submodule:
 
-In order to update all the existing submodules from their upstreams, you can either go into each submodule root folder and do the normal git pull or execute following command:
+```
+$ git submodule add https://github.com/your-identity/hugo-theme-dimension.git themes/dimension
+```
 
-    $ git submodule foreach git pull
+## How to configure
 
-## Getting Started
+The theme doesn't require any advanced configuration. Just copy:
 
-After installation, you will need to configure the config.toml file, change pictures, and write your pages.
+```toml
+baseURL = "http://example.org/"
+languageCode = "en-us"
+title = "My New Hugo Site"
+theme = "dimension"
+```
 
-### The config file
+to `config.toml` file in your Hugo root directory and change params fields.
 
-Copy the `config.toml` from the exampleSite folder into your Hugo site's root folder. Change the fields as needed. Add or delete social media by following the examples in the file. You may need to look up the [font-awesome](http://fontawesome.io/) icon names. The icon field should be filled out without the "fa" prefix. The icon field for Twitter should be 'twitter' instead of 'fa-twitter'.
+**NOTE:** All the main page styling and configuration can be done by creating `_index.md` pages in the `content` folder and subdirectories. This choice was made to allow the use of any headless CMS (e.g. netlify) for total customization.
 
-You can change the logo as well with font-awesome icons. The default is set to `fa-diamond`.
-To use an image as logo, remove the `logo = "fa-diamond"` line and replace it with `logoimage = "/path/to/image.png"` and place your image at that location in the `static` folder. The image should be in square format and at least 86*86 pixels for best viewing experience.
+## Post archetype
 
-### Changing pictures
+See the basic `_index.md` file params supported by the theme — https://github.com/your-identity/hugo-theme-dimension/blob/master/archetypes/_index.md
 
-Create an `images` folder in the static folder of your site -- **not** the theme's static folder. Add pictures to `/static/images` as needed. If you want to change the background image, the replacement image should be named `bg.jpg`.
+## How to run your site
 
-### Writing your pages
+From your Hugo root directory run:
 
-To create a new page, run the following command inside your Hugo sites:
+```
+$ hugo server -t dimension
+```
 
-    $ hugo new your-page.md
+and go to `localhost:1313` in your browser. From now on all the changes you make will go live, so you don't need to refresh your browser every single time.
 
-Change `your-page` to what you want to name the file. There are three variables that you can change: `title`, `weight`, and `draft`. Weight is set to 0 by default, so be sure to change it.
+## How to contribute
 
-As default, the title of the page will be taken as menu item. In case you have longer page titles, the menu may get distorted and you can set an additional parameter in the pages front matter to have a shorter menu name.
-Just set `menuname = "<Your Short Name>"` in that page and it will use this optional parameter. 
+If you spot any bugs, please use [Issue Tracker](https://github.com/your-identity/hugo-theme-dimension/issues) or if you want to add a new feature directly please create a new [Pull Request](https://github.com/your-identity/hugo-theme-dimension/pulls).
 
-You can also copy the pages from the exampleSite folder and modify those pages.
+## Sponsoring
 
-### Contact Form
+If you like my work and want to support the development of the project, now you can! Just:
 
-You will need to use an external service for the contact form since static sites cannot handle forms on their own. One such service is [Formspree](https://formspree.io/). Formspree has a free tier. Check out the `formspree.md` page in the exampleSite folder for a template.
+<a href="https://www.buymeacoffee.com/dasnaghi" target="_blank"><img src="https://res.cloudinary.com/panr/image/upload/v1579374705/buymeacoffee_y6yvov.svg" alt="Buy Me A Coffee" ></a>
 
-### Tabs as Links
-
-You may want a tab to link to external content. Create your page, and set a variable `link` in the front matter to your desired output. For example: `link = "http://www.example.org"`. Note: this method could be used to link to internal pages, but the theme does not support this out of the box.
-
-## Multilingual Support
-
-For the `config.toml`, follow the template at the bottom of `config.toml` in your exampleSite folder. German is used as the example language, but you can use any language you want. For content files, it is suggested to use the same base file name for each translate page. For example, for `about.md`, use `about.de.md` for the German page. 
-
-## Google Analytics
-To include Google Analytics, you can follow the standard Hugo way and just add `googleAnalytics = "UA-123-45"` to the `config.toml` as described on [Analytics in Hugo](https://gohugo.io/extras/analytics/). 
-
-## CSS Overrides
-If you need to override some CSS properties or add new ones which will be on top of the existing template CSS, you can create the file `static/css/project.css` and it will be loaded after the themes own CSS files.
-
-Changing the background color for the content modals would need the following addition to the `project.css`
-
-    #main article {
-			background-color: rgba(89, 64, 50, 0.85);
-		} 
 
 ## License
 
-This theme is released under the CC BY 3.0 license. For more information, read the [License](https://github.com/sethmacleod/dimension/blob/master/LICENSE.md).
+Copyright © 2020 Davide Asnaghi
+
+The theme is released under the CC BY 3.0 License. Check the [original theme license](https://github.com/your-identity/hugo-theme-dimension/blob/master/LICENSE.md) for additional licensing information.
