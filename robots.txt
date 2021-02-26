@@ -1,4 +1,1 @@
 User-agent: *
-Allow: /
-
-Sitemap: https://github.com/krembilneuroinformatics/ccns/tree/gh-pages/sitemap.xml
