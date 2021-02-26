@@ -4,7 +4,7 @@ weight = 20
 draft = false
 +++
 
-{{< figure class="image main" src="/images/whole_brain_modelling.jpg" >}}
+{{< figure class="image main" src="images/whole_brain_modelling.jpg" >}}
 
 ## Eligibility and prerequisites: 
 

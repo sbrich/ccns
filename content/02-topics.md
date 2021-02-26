@@ -4,7 +4,7 @@ weight = 20
 draft = false
 +++
 
-{{< figure class="image main" src="/images/brain_circuit_modelling.jpg" >}}
+{{< figure class="image main" src="images/brain_circuit_modelling.jpg" >}}
 
 ## Major topics covered:
 
