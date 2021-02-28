@@ -1,11 +1,13 @@
 
 +++
-title = "04-CCNS_2020"
+title = "05-previous_years"
 weight = 20
 draft = false
 +++
 
 {{< figure class="image main" src="images/computational_genomics.jpg" >}}
+
+Previous Years
 
 CCNS 2020
 
